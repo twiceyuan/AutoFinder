@@ -42,7 +42,7 @@ class AutoActivity extends Activity {
 
 ## 其他细节
 
-1. 使用运行时注解实现，效率可能不高
+1. 使用运行时反射实现，效率可能不高
 2. 可以使用自定义的匹配器。默认使用变量名去寻找 id 完全相符的 view，你也可以使用内置的[CamelCaseNameMatcher](library/src/main/java/com/twiceyuan/autofinder/CamelCaseNameMatcher.java) 来根据变量名 'mTvName' 匹配到 id 为 'tv_name' 的 view。或者实现你自己想要的匹配器。
 
 ## 许可
