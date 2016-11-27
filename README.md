@@ -35,7 +35,7 @@ class AutoActivity extends Activity {
 
 ## Details
 
-1. Implement by runtime annotations
+1. Implement by runtime reflection
 2. Custom name matcher. Default matcher use field to find view, you can use [CamelCaseNameMatcher](library/src/main/java/com/twiceyuan/autofinder/CamelCaseNameMatcher.java) field name 'mTvName' to find view that its id is 'tv_name'. or other matcher rule you want to do.
 
 ## License
