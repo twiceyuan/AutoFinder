@@ -1,14 +1,13 @@
 package com.twiceyuan.autofinder.sample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.twiceyuan.autofinder.AutoFinder;
+import com.twiceyuan.autofinder.AutoFind;
 import com.twiceyuan.autofinder.IgnoreFind;
-
-public class MainActivity extends AppCompatActivity {
+@AutoFind
+public class MainActivity extends BaseActivity {
 
     TextView hello_finder;
 
@@ -24,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_layout);
-
-        AutoFinder.find(this);
 
         hello_finder.setText(helloText);
 

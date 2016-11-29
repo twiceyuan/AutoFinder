@@ -38,7 +38,7 @@ public class AutoFinder {
         });
     }
 
-    private static void injectViews(Object holder, ViewFinder viewFinder) {
+    static void injectViews(Object holder, ViewFinder viewFinder) {
         Field[] declaredFields = holder.getClass().getDeclaredFields();
 
         for (Field declaredField : declaredFields) {
