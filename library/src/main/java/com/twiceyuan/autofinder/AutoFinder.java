@@ -48,7 +48,7 @@ public class AutoFinder {
                 Class<?> finalClass = declaredField.getType();
 
                 int viewId = Utils.getResourceId(
-                        Utils.getContext(holder),
+                        Utils.getContext(viewFinder),
                         mViewNameMatcher.convertFiledName(declaredField.getName()),
                         "id");
 
