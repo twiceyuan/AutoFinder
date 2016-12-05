@@ -1,5 +1,6 @@
 package com.twiceyuan.autofinder;
 
+import android.content.Context;
 import android.view.View;
 
 /**
@@ -10,4 +11,6 @@ import android.view.View;
 interface ViewFinder {
 
     View findViewById(int id);
+
+    Context getContext();
 }

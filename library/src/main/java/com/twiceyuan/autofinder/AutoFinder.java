@@ -1,6 +1,7 @@
 package com.twiceyuan.autofinder;
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.View;
 
 import java.lang.annotation.Annotation;
@@ -26,6 +27,11 @@ public class AutoFinder {
             public View findViewById(int id) {
                 return activity.findViewById(id);
             }
+
+            @Override
+            public Context getContext() {
+                return activity;
+            }
         });
     }
 
@@ -34,6 +40,11 @@ public class AutoFinder {
             @Override
             public View findViewById(int id) {
                 return parentView.findViewById(id);
+            }
+
+            @Override
+            public Context getContext() {
+                return parentView.getContext();
             }
         });
     }
@@ -48,7 +59,7 @@ public class AutoFinder {
                 Class<?> finalClass = declaredField.getType();
 
                 int viewId = Utils.getResourceId(
-                        Utils.getContext(viewFinder),
+                        viewFinder.getContext(),
                         mViewNameMatcher.convertFiledName(declaredField.getName()),
                         "id");
 

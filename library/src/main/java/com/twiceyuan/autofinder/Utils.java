@@ -1,8 +1,6 @@
 package com.twiceyuan.autofinder;
 
-import android.app.Activity;
 import android.content.Context;
-import android.view.View;
 
 /**
  * Created by twiceYuan on 27/11/2016.
@@ -21,25 +19,5 @@ class Utils {
         } catch (Exception e) {
             return -1;
         }
-    }
-
-    static Context getContext(Object object) {
-        if (object instanceof Activity) {
-            return (Context) object;
-        }
-
-        if (object instanceof android.app.Fragment) {
-            return ((android.app.Fragment) object).getActivity();
-        }
-
-        if (object instanceof android.support.v4.app.Fragment) {
-            return ((android.support.v4.app.Fragment) object).getActivity();
-        }
-
-        if (object instanceof View) {
-            return ((View) object).getContext();
-        }
-
-        return null;
     }
 }
