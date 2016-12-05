@@ -9,5 +9,5 @@ import java.lang.annotation.RetentionPolicy;
  * Site: http://twiceyuan.com
  */
 @Retention(RetentionPolicy.RUNTIME)
-public @interface AutoFInd {
+public @interface AutoFind {
 }

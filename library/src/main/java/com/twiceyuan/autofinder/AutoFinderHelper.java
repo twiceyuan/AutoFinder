@@ -38,7 +38,7 @@ public class AutoFinderHelper {
         Annotation[] annotations = container.getClass().getAnnotations();
         if (annotations != null) {
             for (Annotation annotation : annotations) {
-                if (annotation instanceof AutoFInd) {
+                if (annotation instanceof AutoFind) {
                     AutoFinder.injectViews(container, viewFinder);
                     return;
                 }

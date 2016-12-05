@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.twiceyuan.autofinder.AutoFInd;
+import com.twiceyuan.autofinder.AutoFind;
 import com.twiceyuan.autofinder.IgnoreFind;
-@AutoFInd
+@AutoFind
 public class MainActivity extends BaseActivity {
 
     TextView hello_finder;
